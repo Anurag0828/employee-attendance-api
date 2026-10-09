@@ -27,8 +27,30 @@ Analytics and daily gap filling run in MongoDB; explain endpoints reuse the real
 All 12 required endpoints are implemented. No authentication is included, as scoped
 by the assignment; `regularized_by` is a supplied audit label. Setup secrets are ignored
 by Git. See [REVIEW.md](REVIEW.md), [DECISIONS.md](DECISIONS.md), and the
-[walkthrough](WALKTHROUGH.md) for design and demonstration notes.
+[walkthrough](docs/WALKTHROUGH.md) for design and demonstration notes.
 
-Optional tests and their dependencies are entirely under [tests/](tests/README.md).
+Optional test code and dependencies are entirely under `tests/`;
+see the [testing guide](docs/TESTING.md) and [recorded results](docs/TEST_RESULTS.md).
 The app runs without that folder. Tests use a newly generated disposable database;
 the 100,000-record check requires `--run-scale`.
+
+## Project layout
+
+```text
+candidate_kit/             # Repository root; run commands here
+  app/                    # Application package
+    main.py               # All application logic, as required by the assignment
+  docs/                   # Walkthrough, testing guide, and verification results
+  tests/                  # Optional automated tests and manual demo helper
+  .env.example            # Configuration template without credentials
+  .gitignore              # Excludes secrets, local tools, and generated files
+  pyproject.toml          # Pytest and Ruff configuration
+  requirements.txt        # Application dependencies
+  README.md               # Setup and navigation
+  REVIEW.md               # Required starter-code review
+  DECISIONS.md            # Required design answers
+```
+
+The assignment requires `app/main.py` and the three submission documents above
+in these locations. Supporting documentation is collected in [docs/](docs/README.md).
+Local `.env`, `.venv/`, and `.local/` are excluded from Git.

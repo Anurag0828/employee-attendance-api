@@ -38,5 +38,22 @@ the 92-day request limit (plus one empty group).
 The installed Starlette test client emits one deprecation warning for its httpx
 adapter. It does not affect application runtime or the passing assertions.
 
-All databases created by the successful test sessions were removed by the test
-fixture. No existing application records were seeded, cleared, or replaced.
+All databases created by the successful automated test sessions were removed by
+the test fixture. Those tests did not seed, clear, or replace application records.
+
+## Folder organization verification
+
+After organizing the workspace on 9 October 2026:
+
+- Application code and the assignment's required entry point were unchanged.
+- 71 rule and real-server startup tests passed in 1.47 seconds on local MongoDB.
+  The existing Starlette deprecation warning remained the only warning.
+- Ruff lint and formatting passed; all 15 relative documentation links resolved.
+- The running Atlas-backed API returned 200 for health, employee and attendance
+  listing, and all four analytics reports.
+- The fictional manual demo still contained four employees and five attendance
+  records. The separate local demo data was also verified after its runtime moved
+  into the ignored `.local/` directory.
+
+These checks verify the folder reorganization. The full-suite and scale timings
+above are from the earlier implementation verification, not a new scale run.

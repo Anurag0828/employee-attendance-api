@@ -11,9 +11,8 @@ __pycache__/
 htmlcov/
 test-results/
 *.log
-# Reference kit and local data are not submission deliverables.
-PROBLEM_STATEMENT.docx
-sample_data/
-sample_seed.py
-DATA_MODEL.md
-openapi.yaml
+# Local runtimes, database files, and service logs.
+/.local/
+# Original assignment materials and personal planning artifacts stay local.
+/docs/assignment/
+/docs/planning/
