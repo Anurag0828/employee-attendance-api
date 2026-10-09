@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+test-results/
+*.log
+# Reference kit and local data are not submission deliverables.
+PROBLEM_STATEMENT.docx
+sample_data/
+sample_seed.py
+DATA_MODEL.md
+openapi.yaml
